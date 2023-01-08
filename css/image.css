@@ -54,6 +54,7 @@ footer
 	right:0;
 	z-index: 999;
 	padding:1vh 5px;
+	color:var(--Ttheme);
 }
 
 
@@ -70,14 +71,6 @@ footer
 	width:30%;
 }
 
-.edit-image
-{
-	
-}
-
-.save-image
-{
-}
 
 .btm-btn
 {
