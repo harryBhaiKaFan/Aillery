@@ -38,7 +38,9 @@ function setImageHandler(image,folder)
 			case "Open":
 				Settings.opened_image = image.id;
 				Settings.pushPage(location.href);
-				location.replace("https://harrybhaikafan.github.io/Aillery/image.html");
+				let url = location.href
+				url = url.slice(0,url.lastIndexOf("/"));
+				location.replace(url+"/image.html");
 				break;
 		}
 	}).catch(()=>{
@@ -82,7 +84,9 @@ const FolderHandler = {
 	},
 	addImage: function(){
 		Settings.pushPage(location.href);
-		location.replace("https://harrybhaikafan.github.io/Aillery/capture.html");
+		let url = location.href;
+		url = url.slice(0,url.lastIndexOf("/"));
+		location.replace(url+"/capture.html");
 	},
 	prevPage: function(){
 		let url = Settings.popPage();

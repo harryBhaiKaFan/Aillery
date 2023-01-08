@@ -36,7 +36,9 @@ function setFolderHandler(folder)
 			case "Open":
 				Settings.opened_folder = folder.id;
 				Settings.pushPage(location.href);
-				location.replace('https://harrybhaikafan.github.io/Aillery/folder.html');
+				let url = location.href;
+				url = url.slice(0,url.lastIndexOf("/"));
+				location.replace(url+'/folder.html');
 				break;
 		}
 	}).catch(()=>{
@@ -137,7 +139,9 @@ const App = {
 	addImage: function (){
 		/* all AI handled by capture.html */
 		Settings.pushPage(location.href);
-		location.replace("https://harrybhaikafan.github.io/Aillery/capture.html");
+		let url = location.href;
+		url = url.slice(0,url.lastIndexOf("/"));
+		location.replace(url+"/capture.html");
 	}
 }
 
