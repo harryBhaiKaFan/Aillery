@@ -26,8 +26,8 @@ export let Camera = {
 		navigator.mediaDevices.getUserMedia(constraints).then((stream)=> {
 			this.vElem.srcObject = stream;
 			this.stream = stream;
-			this.vElem.onloadedmetadata = ()=> {
-				this.vElem.play();
+			this.vElem.oncanplay = ()=> {
+				setTimeout(()=>this.vElem.play(),100);
 			}
 		}).catch((err)=> {
 			console.log(err);

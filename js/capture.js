@@ -23,7 +23,11 @@ const ImageCapturer = {
 			video:{
 				facingMode:Settings.cam,
 				width:_WIDTH,
-				height:_HEIGHT
+				height:_HEIGHT,
+				frameRate:{
+					min: 10,
+					ideal: 30
+				}
 			}
 		}
 
