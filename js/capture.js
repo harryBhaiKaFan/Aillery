@@ -7,8 +7,8 @@ const backBtn = document.querySelector("[data-back-btn]");
 const changeModeBtn = document.querySelector("[data-change-mode-btn]");
 const clickBtn = document.querySelector("[data-click-btn]");
 
-const _WIDTH = 1280;
-const _HEIGHT = 720;
+const _WIDTH = 720;
+const _HEIGHT = 1280;
 
 const ImageCapturer = {
 	constraints:null,
