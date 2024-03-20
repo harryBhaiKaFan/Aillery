@@ -1,24 +1,13 @@
-// An API to interact with indexedDB.
-	// Following operations can be performed.
-	// 1.storing data
-// 2.getting data
-// 3.updating data
-// 4.deleting data
-
-/***
-	*
-	* Make transaction and perform any
-	* operation.
-	*
-	* ***/
 
 
-	function makeTrnxn(DB, storeName, mode) {
-		let tx = DB.transaction(storeName, mode);
-		let store = tx.objectStore(storeName);
+//IndexedDB interaction specific
 
-		return(store);
-	}
+function makeTrnxn(DB, storeName, mode) {
+	let tx = DB.transaction(storeName, mode);
+	let store = tx.objectStore(storeName);
+
+	return(store);
+}
 
 
 
@@ -72,6 +61,9 @@ function readAllData(DB, storeName) {
 	}));
 }
 
+
+
+// Aillery specific functions/objects
 
 function increImgID() {
 	let id = localStorage.getItem("Aillery_IMG");
