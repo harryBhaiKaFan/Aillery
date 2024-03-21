@@ -8,7 +8,7 @@
 	"icons": [
 		{
 			"src":"/media/app/img/logo.png",
-			"sizes":"100x100",
+			"sizes":"512x512",
 			"type":"image/png"
 		}
 	]
