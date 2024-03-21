@@ -28,13 +28,19 @@ const res = [
 self.addEventListener("install", ev => {
 	ev.waitUntil(caches.open(cacheName).then((cache)=>{
 		cache.addAll(res);
-	}).catch(()=>{
 	}));
 });
 
-self.addEventListener("fetch", ev => {
-	ev.respondWith(caches.match(ev.request)
-		.then((cachedRes)=>{
-			return cachedRes || fetch(ev.request);
-		}));
+
+const cacheFirst = async (request) =>{
+	const response = await caches.match(request);
+	if (response) {
+		return response;
+	}
+
+	return fetch(request);
+}
+self.addEventListener("fetch", (ev) => {
+	console.log(ev.request);
+	ev.respondWith(cacheFirst(ev.request));
 });
