@@ -70,6 +70,12 @@ function createFolderDiv(name)
 const App = {
 	folders: [],
 	init: function() {
+
+		if ("serviceWorker" in navigator)
+		{
+			navigator.serviceWorker.register("/sw.js");
+		}
+
 		Loader.init(document.body);
 		Storage.init().then(()=>{
 			App.loadFolders();
