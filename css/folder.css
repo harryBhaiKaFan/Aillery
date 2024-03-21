@@ -7,7 +7,6 @@ header
 	color:var(--Ttheme);
 	font-family:serif;
 	max-height:15%;
-	overflow:scroll;
 	width:100vw;
 	font-size:1.2rem;
 	display:flex;

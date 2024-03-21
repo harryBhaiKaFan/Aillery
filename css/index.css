@@ -9,7 +9,6 @@ header
 	font-family:serif;
 	letter-spacing:0.2rem;
 	max-height:15%;
-	overflow:scroll;
 	width:100vw;
 	font-size:1.3rem;
 	display:flex;
